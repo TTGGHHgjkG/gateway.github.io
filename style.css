@@ -441,19 +441,19 @@ section .title::after{
     background: red;
 }
 .skills-content .right .botf::before{
-    width: 68%;
+    width: 100%;
 }
 .skills-content .right .botp::before{
-    width: 15%;
+    width: 0%;
 }
 .skills-content .right .server::before{
     width: 0%;
 }
-.skills-content .right .website::before{
-    width: 7%;
+.skills-content .right .website1::before{
+    width: 100%;
 }
-.expired .right .mysql::before{
-    width: 10%;
+.skills-content .right .website2::before{
+    width: 0%;
 }
 
 /* teams section styling */
