@@ -440,14 +440,14 @@ section .title::after{
     top: 0;
     background: red;
 }
-.skills-content .right .botf::before{
-    width: 0%;
+.skills-content .right .botb::before{
+    width: 100%;
 }
 .skills-content .right .botp::before{
-    width: 0%;
+    width: 100%;
 }
 .skills-content .right .server::before{
-    width: 0%;
+    width: 100%;
 }
 .skills-content .right .net::before{
     width: 100%;
