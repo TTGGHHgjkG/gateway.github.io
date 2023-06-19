@@ -6,7 +6,7 @@ $(document).ready(function () {
     } else {
       $(".navbar").removeClass("sticky");
     }
-   
+
     // scroll-up button show/hide script
     if (this.scrollY > 500) {
       $(".scroll-up-btn").addClass("show");
@@ -15,10 +15,11 @@ $(document).ready(function () {
     }
   });
 
-//button
+//scrollBehavior
 let btn = document.getElementsByTagName('button')[0];
+
 btn.addEventListener('click', function(){
-  swal("Pesanan Diterima!", "kamu berhasil menyewa bot.", "success");
+  swal("Tunggu!", "kalo buru-buru ga baik", "success");
 });
 
   // slide-up script
@@ -42,8 +43,8 @@ btn.addEventListener('click', function(){
   // typing text animation script
   var typed = new Typed(".typing", {
     strings: ["Javascript", "Python"],
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: 100,
+    backSpeed: 60,
     loop: true,
   });
 

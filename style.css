@@ -32,7 +32,7 @@ section{
 }
 .max-width{
     max-width: 1300px;
-    padding: 40px 40px;
+    padding: 0 80px;
     margin: auto;
 }
 .about, .services, .skills, .teams, .contact, footer{
@@ -71,7 +71,7 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: black;
+    color: pink;
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -82,13 +82,13 @@ section .title::after{
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 30px 50px;
+    padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #FFC0CB;
+    background: pink;
 }
 .navbar .max-width{
     display: flex;
@@ -96,16 +96,16 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #000000;
+    color: #fff;
     font-size: 35px;
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: black;
+    color: yellow;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-    color: #;
+    color: #fff;
 }
 .navbar .menu li{
     list-style: none;
@@ -113,7 +113,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #ff;
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -137,7 +137,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: gray;
+    background: crimson;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -163,52 +163,61 @@ section .title::after{
 
 
 /* home section styling */
-.skills{
+.home{
     display: flex;
     background: url("banner.jpg") no-repeat center;
     height: 100vh;
+    color: #fff;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-
-/* loader ala2 */
-.spinner {
-  width: 45px;
-  height: 45px;
-  display: grid;
-  border: 4.5px solid #0000;
-  border-radius: 60%;
-  border-color: #ff69B4 #000000;
-  animation: spinner-e04l1k 3s infinite linear;
+.home .max-width{
+  width: 100%;
+  display: flex;
 }
-.spinner::before,
-.spinner::after {
-  content: "";
-  grid-area: 1/1;
-  margin: 2.2px;
-  border: inherit;
-  border-radius: 50%;
+.home .max-width .row{
+  margin-right: 0;
 }
-.spinner::before {
-  border-color: #ff69B4 #000000;
-  animation: inherit;
-  animation-duration: 1.5s;
-  animation-direction: reverse;
+.home .home-content .text-1{
+    font-size: 27px;
 }
-.spinner::after {
-  margin: 8.9px;
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
 }
-@keyframes spinner-e04l1k {
-  100% {
-    transform: rotate(1turn);
-  }
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: pink;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: black;
+    color: pink;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid pink;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
 }
 
 /* about section styling */
 .about .title::after{
+    background: white;
     content: "about xinzuo";
+    color: black;
 }
 .about .about-content .left{
     width: 45%;
@@ -252,21 +261,22 @@ section .title::after{
 
 /* services section styling */
 .services, .teams{
-    color:#ffffff;
-    background: #111;
+    color: black;
+    background: white;
 }
 .services .title::before,
 .teams .title::before{
-    background: #fff;
+    background: black;
 }
 .services .title::after,
 .teams .title::after{
-    background: #ffffff;
-    content: "what got";
+    background: white;
+    content: "service";
+    color: black;
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: #222;
+    background: black;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -274,7 +284,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
-    background: white;
+    background: pink;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -284,106 +294,26 @@ section .title::after{
 }
 .services .serv-content .card i{
     font-size: 50px;
-    color: white;
+    color: pink;
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
     color: #000000;
 }
 .services .serv-content .card .text{
+    color: pink;
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
 .services .serv-content .card:hover .text{
-  color: #000000;
-}
-
-/*========== LAYOUT ==========*/
-.bd-container{
-  max-width: 960px;
-  width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-}
-
-.bd-grid{
-  display: grid;
-  gap: 1.5rem;
-}
-
-.l-header{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--body-color);
-}
-
-/*========== MENU ==========*/
-.menu__container{
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-}
-.menu__content{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--container-color);
-  border-radius: .5rem;
-  box-shadow: 0 2px 4px rgba(3,74,40,.15);
-  padding: .75rem;
-}
-.menu__img{
-  width: 100px;
-  align-self: center;
-  margin-bottom: var(--mb-2);
-}
-.menu__name, .menu__preci{
-  font-weight: var(--font-semi-bold);
-  color: var(--title-color);
-}
-.menu__name{
-  font-size: var(--normal-font-size);
-}
-.menu__detail, .menu__preci{
-  font-size: var(--small-font-size);
-}
-.menu__detail{
-  margin-bottom: var(--mb-1);
-}
-.menu__button{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  padding: .625rem .813rem;
-  border-radius: .5rem 0 .5rem 0;
-}
-
-/*========== CLASS CSS ==========*/
-.section{
-  padding: 4rem 0 2rem;
-}
-.section-title, .section-subtitle{
-  text-align: center;
-}
-.section-title{
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-  margin-bottom: var(--mb-3);
-}
-.section-subtitle{
-  display: block;
-  color: var(--first-color);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1);
+    color: black;
 }
 
 /* skills section styling */
+
 .skills .title::after{
-    content: "🔴DOWN 🟢UP";
+    content: "rent &  premium";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -398,20 +328,19 @@ section .title::after{
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: black;
+    background: crimson;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid black;
+    border: 2px solid crimson;
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: white;
-    background: #3cb371;
-    border: 2px solid #3cb371;
+    color: crimson;
+    background: none;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
@@ -429,7 +358,7 @@ section .title::after{
 .skills .skills-content .right .line{
     height: 5px;
     width: 100%;
-    background: #32CD32;
+    background: lightgrey;
     position: relative;
 }
 .skills .skills-content .right .line::before{
@@ -438,22 +367,30 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: red;
+    background: blue;
 }
-.skills-content .right .botf::before{
+.skills .expired .right .garis::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: blue;
+}
+.skills-content .right .bulana::before{
+    width: 35%;
+}
+.skills-content .right .bulanb::before{
+    width: 55%;
+}
+.skills-content .right .bulanc::before{
     width: 100%;
 }
-.skills-content .right .botp::before{
-    width: 0%;
+.skills-content .right .premiuma::before{
+    width: 20%;
 }
-.skills-content .right .server::before{
-    width: 0%;
-}
-.skills-content .right .website1::before{
-    width: 100%;
-}
-.skills-content .right .website2::before{
-    width: 0%;
+.expired .right .mysql::before{
+    width: 10%;
 }
 
 /* teams section styling */
@@ -461,7 +398,7 @@ section .title::after{
     content: "team xinzuo";
 }
 .teams .carousel .card{
-    background: #222;
+    background: black;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -469,7 +406,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
-    background: white;
+    background: pink;
 }
 .teams .carousel .card .box{
     display: flex;
@@ -482,19 +419,20 @@ section .title::after{
     transform: scale(1.05);
 }
 .teams .carousel .card .text{
+    color: pink;
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
 .teams .carousel .card:hover .text{
-    color: black;
+    color: white;
 }
 .teams .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid pink;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
@@ -510,7 +448,7 @@ section .title::after{
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid white!important;
+    border: 2px solid black!important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -519,7 +457,7 @@ section .title::after{
 }
 .owl-dot.active,
 .owl-dot:hover{
-    background: white!important;
+    background: black!important;
 }
 
 /* contact section styling */
@@ -599,7 +537,7 @@ section .title::after{
   align-items: center;
 }
 .right form .button-area button{
-  color: #fff;
+  color: pink;
   display: block;
   width: 160px!important;
   height: 45px;
@@ -610,22 +548,22 @@ section .title::after{
   cursor: pointer;
   flex-wrap: nowrap;
   background: black;
-  border: 2px solid black;
+  border: 2px solid pink;
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: black;
-  background: white;
+  color: crimson;
+  background: none;
 }
 /* footer section styling */
 footer{
-    background: #FFC0CB;
-    padding: 40px 40px;
-    color: #000000;
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
     text-align: center;
 }
 footer span a{
-    color: black;
+    color: crimson;
     text-decoration: none;
 }
 footer span a:hover{

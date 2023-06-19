@@ -161,18 +161,6 @@ section .title::after{
     filter: brightness(90%);
 }
 
-
-/* home section styling */
-.skills{
-    display: flex;
-    background: url("banner.jpg") no-repeat center;
-    height: 100vh;
-    min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-}
-
 /* loader ala2 */
 .spinner {
   width: 45px;
