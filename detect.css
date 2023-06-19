@@ -429,13 +429,13 @@ section .title::after{
     background: red;
 }
 .skills-content .right .botb::before{
-    width: 100%;
+    width: 0%;
 }
 .skills-content .right .botp::before{
-    width: 100%;
+    width: 0%;
 }
 .skills-content .right .server::before{
-    width: 100%;
+    width: 0%;
 }
 .skills-content .right .net::before{
     width: 100%;
