@@ -6,7 +6,7 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --first-color: #069C54;
+  --first-color: pink;
   --first-color-alt: #048654;
   --title-color: #393939;
   --text-color: #707070;
@@ -114,9 +114,9 @@ html{
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
   --title-color: #F1F3F2;
-  --text-color: #C7D1CC;
-  --body-color: #1D2521;
-  --container-color: #27302C;
+  --text-color: white;
+  --body-color: gray;
+  --container-color: lightgray;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -405,6 +405,7 @@ img{
 
 .menu__name{
   font-size: var(--normal-font-size);
+  color: white;
 }
 
 .menu__detail, .menu__preci{
